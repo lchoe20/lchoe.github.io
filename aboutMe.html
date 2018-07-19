@@ -1,0 +1,75 @@
+<DOCTYPE html>
+<html>
+  <head>
+    <link rel = "stylesheet"
+    href = "aboutMe.css">
+  </head>
+  <body>
+      <center>
+        <h1>
+          L e n a
+        </h1>
+
+          </menu>
+        <img src = "https://i.pinimg.com/originals/64/93/6c/64936c7361d115e63d0778b53f494bd6.png" </a>
+        <h2>
+          About Me
+        </h2>
+      </center>
+
+    <div>
+      <center>
+        <p1>
+          - sixteen years old -
+        </p1>
+        <p><p1>
+          - favorite sport: figure skating -
+        </p></p1>
+        <p><p1>
+          - hobbies: volunteering, traveling -
+        </p></p1>
+        <p><p1>
+          - favorite color: blue -
+        </p></p1>
+      </center>
+        <p>
+
+        </p>
+    <div>
+      <center> <h6>
+        -------------------------------------------------------------------------------
+      </h6>
+      <center> <h2>
+        Traveling -- Places I Like
+      </h2>
+          <center>
+            <h3>
+              Cancun
+            </h3>
+          <center> <img src = "https://images.ctfassets.net/knd0dn3kghk7/1TRC17KftSIE0UciOUQCQi/6986752cc53d99522b8519537e1a7200/shutterstock_642212026.jpg?w=946&h=532&fit=thumb" alt = "cancun" style=width:400px;height:200px </a>
+            <h3>
+              Tokyo
+            </h3>
+          <center> <img src = "https://viablog.okmall.tw/images/2016klook/3656_20160808.jpg" alt = "tokyo" style=width:400px;height:200px </a>
+
+        </h2>
+    </div>
+
+      <script>
+      function generate() {
+        var places = ["Tokyo!: Tokyo's neon-lit streetscapes still look like a sci-fi film set – and that's a vision of the city from the 1980s. Tokyo has been building ever since, pushing the boundaries of what's possible on densely populated, earthquake-prone land, adding ever taller, sleeker structures. Come see the utopian mega-malls, the edgy designer boutiques from Japan's award-winning architects, and the world's tallest tower – Tokyo Sky Tree – a twisting spire that draws on ancient building techniques. Stand atop one of Tokyo's skyscrapers and look out over the city at night to see it blinking like the control panel of a starship, stretching all the way to the horizon.", "Cancun!: Cancun's postcard-perfect beaches, with white, powder-soft sand and crystal-clear water, have made it one of Mexico–and the world's–favorite tropical destinations. The draw has always been the region's natural assets—that sky, those waves—but don't mistake this 40-year-old for a city with no heritage. Cancun travel brings together gorgeous natural settings with first-class accommodations, and the rich, mysterious world of the Mayans. Families, groups of friends and couples from all across the globe choose to travel to Cancun because of its perfect balance between relaxation and endless entertainment options."];
+        var random = places[Math.floor(Math.random() *places.length)];
+        document.getElementById('places').innerHTML = random;
+      }
+      generate();
+      </script>
+
+
+
+      <div> <center>
+      <p id = "places"> Travel Suggestion! </p>
+      <button type="button" onclick="generate()">Click to see where you should travel next </button>
+
+
+  </body>
+</html>
