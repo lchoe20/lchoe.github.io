@@ -1,0 +1,6 @@
+from random import *
+aRandomIndex = randint(0,len(names)-1)
+
+names = ["Janice", "David", "George", "Ricky", "Bella", "Haley"]
+
+print(names[randint])

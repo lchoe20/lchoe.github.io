@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html>
 <link rel="stylesheet" href="w3bsite.css">
-
+<link rel="stylesheet" href="webbb.css">
+<link rel="stylesheet" href="webbb.js">
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <style>
 .navbar {
     overflow: hidden;
-    background-color: #333;
+    background-color:rgba(0,0,0,.65);
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -77,7 +83,7 @@
     z-index: 99; /* Make sure it does not overlap */
     border: none; /* Remove borders */
     outline: none; /* Remove outline */
-    background-color: black; /* Set a background color */
+    background-color: Black; /* Set a background color */
     color: white; /* Text color */
     cursor: pointer; /* Add a mouse pointer on hover */
     padding: 15px; /* Some padding */
@@ -88,34 +94,47 @@
 #myBtn:hover {
     background-color: #555; /* Add a dark-grey background on hover */
 }
+
+
+body {
+    background-color: #FFFFFF;
+}
+
+.header {
+  background-color: #f1f1f1;
+  padding: 30px;
+  text-align: center;
+
+
 </style>
 </head>
 <body>
+
+
 
 <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
 
-
-</style>
-</head>
-<body>
-
 <div class="navbar">
   <a href="#home">Home</a>
-  <a href="#news">News</a>
-  <div class="dropdown">
-    <button class="dropbtn">Dropdown
-      <i class="fa fa-caret-down"></i>
-    </button>
-    <div class="dropdown-content">
-      <a href="#">Link 1</a>
-      <a href="#">Link 2</a>
-      <a href="#">Link 3</a>
-    </div>
-  </div>
+  <a href="#aboutus">About Us</a>
+  <a href="#exploretheworld">Explore the world</a>
+  <a href="#getinspired">Get Inspired</a>
+  <a href="#getinvolved">Get Involved</a>
+  <a href="#currentcrises">Current Crises</a>
+  <img class="logo-img" src="logo.png">
 </div>
 
-<img src = "earthBubble1.png"/>;
+
+
+<div id="overlay">
+    <video class="visible-desktop" id="hero-vid" autoplay loop muted>
+        <source type="video/mp4" src="winter.mp4"></source>
+    </video>
+
+    <img id="hero-pic" class="hidden-desktop" src="winter.mp4" alt="">
+</div>
+
 
 
 <script>
@@ -137,9 +156,43 @@ function topFunction() {
 }
 
 
+
+
 </script>
 
+  <center><img class="big-logo" src="logo.png"><center>
 
+
+
+  <div id="content">
+    <img class="bigImage" src="about.png">
+    <div class="words">
+    <div class="middle">about us</div>
+  </div>
+  </div>
+
+  <div class="bgimg-1">
+    <div class="par1">
+    <br>
+    <br>
+    <p><div class="middle">EXPLORE THE WORLD</div></p>
+   </div>
+  </div>
+
+  <div id="content">
+    <img class="red" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSF79vZ6L-YysovH73Ef3G8EGFqnhI1LaVNlnsCNeQ1mGLXbvvS">
+    <div class="words">
+    <div class="middle">explore the world</div>
+  </div>
+  </div>
+
+  <div class="bgimg-2">
+    <div class="par2">
+    <br>
+    <br>
+    <p><div class="middle">GET INVOLVED</div></p>
+   </div>
+  </div>
 
 </body>
 </html>

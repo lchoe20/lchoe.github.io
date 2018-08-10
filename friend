@@ -1,0 +1,7 @@
+friends = ["Beyonce", "Jay-Z", "Chrissy Teigen", "Barack Obama", "Stephen Colbert"]
+weight = [153.4, 81.2, 1293.4, 432.6]
+random_data = ["George", 8, 10.2]
+
+print(friends[0])
+print(weight)
+print(random_data)

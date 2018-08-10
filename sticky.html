@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="w3bsite.css">
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+
+
+#myBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: Black; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+}
+
+#myBtn:hover {
+    background-color: #555; /* Add a dark-grey background on hover */
+}
+
+
+body {
+  margin: 0;
+  font-size: 28px;
+}
+
+.header {
+  background-color: #f1f1f1;
+  padding: 30px;
+  text-align: center;
+}
+
+#navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+#navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+#navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+#navbar a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.content {
+  padding: 16px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
+
+</style>
+</head>
+<body>
+
+
+
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+
+
+
+
+</style>
+</head>
+
+
+<div class="w3-content w3-section" style="max-width:500px">
+  <img class="mySlides" src="earthBubble8.png" style="width:100%">
+  <img class="mySlides" src="earthBubble9.png" style="width:100%">
+  <img class="mySlides" src="earthBubble10.png" style="width:100%">
+  <img class="mySlides" src="earthBubble11.png" style="width:100%">
+</div>
+
+
+<body>
+
+
+
+  <div id="navbar">
+    <a href="#home">Home</a>
+    <a href="#aboutus">About Us</a>
+    <a href="#exploretheworld">Explore the world</a>
+    <a href="#getinspired">Get Inspired</a>
+    <a href="#getinvolved">Get Involved</a>
+    <div class="dropdown">
+      <button class="dropbtn">Current Crisis
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="#">Immigration</a>
+        <a href="#">Mass Shootings </a>
+        <a href="#">Homelessness</a>
+          <a href="#">World Hunger</a>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+<div class="head">
+  <p> Hello
+  </p>
+</div>
+
+<img src = "map.png"/>;
+
+
+<script>
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";
+    }
+    myIndex++;
+    if (myIndex > x.length) {
+      setTimeout("carousel()", pause)
+
+    }
+    x[myIndex-1].style.display = "block";
+    setTimeout(carousel, 600); // Change image every 2 second
+}
+
+</script>
+
+<img src = "earthBubble11.png"/>
+
+</body>

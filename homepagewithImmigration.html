@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="w3bsite.css">
+<link rel="stylesheet" href="webbb.css">
+<link rel="stylesheet" href="webbb.js">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.navbar {
+    overflow: hidden;
+    background-color:rgba(0,0,0,.65);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: grey;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+
+#myBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: Black; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+}
+
+#myBtn:hover {
+    background-color: #555; /* Add a dark-grey background on hover */
+}
+
+
+body {
+    background-color: #FFFFFF;
+}
+
+.header {
+  background-color: #f1f1f1;
+  padding: 30px;
+  text-align: center;
+
+
+</style>
+</head>
+<body>
+
+
+
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+
+
+<div class="navbar">
+  <a href="web.html">Home</a>
+  <a href="">About Us</a>
+  <a href="#exploretheworld">Explore the world</a>
+  <a href="#getinspired">Get Inspired</a>
+  <a href="#getinvolved">Get Involved</a>
+  <div class="dropdown">
+    <button class="dropbtn">Current Crises
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="immigration.html">Immigration</a>
+      <a href="#">Mass Shootings </a>
+      <a href="#">Homelessness</a>
+      <a href="#">World Hunger</a>
+    </div>
+  </div>
+  <img class="logo-img" src="logo.png">
+</div>
+
+
+
+<div class="w3-content w3-section" style="max-width:500px">
+  <img class="mySlides" src="earthBubble8.jpg" style="width:100%">
+  <img class="mySlides" src="earthBubble9.jpg" style="width:100%">
+  <img class="mySlides" src="earthBubble10.jpg" style="width:100%">
+  <img class="mySlides" src="earthBubble11.jpg" style="width:100%">
+</div>
+
+
+<div id="overlay">
+    <video class="visible-desktop" id="hero-vid" autoplay loop muted>
+        <source type="video/mp4" src="winter.mp4"></source>
+    </video>
+
+    <img id="hero-pic" class="hidden-desktop" src="winter.mp4" alt="">
+</div>
+
+
+
+<script>
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+
+var myIndex = 0;
+  carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";
+    }
+    myIndex++;
+    if (myIndex > x.length) {
+      setTimeout("carousel()", pause)
+
+    }
+    x[myIndex-1].style.display = "block";
+    setTimeout(carousel, 600); // Change image every 2 second
+}
+
+
+</script>
+
+
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial;
+    font-size: 17px;
+}
+
+.container {
+    position: relative;
+    max-width: auto;
+    margin: 0 auto;
+}
+
+.container img {
+  vertical-align:middle;
+ }
+
+.container .content {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Black background with transparency */
+    color: #f1f1f1;
+    width: 100%;
+    }
+img {
+    -webkit-filter: blur(2px); /* Safari 6.0 - 9.0 */
+    filter: blur(2px);
+}
+h1 {
+   text-shadow: 3px 2px black;
+    font-size: 80px;
+}
+</style>
+<body>
+
+<div class="container">
+  <img src="immigration.jpg" alt="immigration" style="width:100%;">
+  <div class="content">
+    <h1>Immigration</h1>
+    <p>
+      <a href="immigration.html">
+    <button>Read more</button>
+</a>
+</p>
+  </div>
+</div>
+
+
+
+</body>
